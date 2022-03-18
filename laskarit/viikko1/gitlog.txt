@@ -1,0 +1,113 @@
+commit e7f118e5f77d09f92925b02aae58595f32ce5b3a
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 22:30:52 2022 +0200
+
+    file1 deleted and file2 renamed
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 17565f1675d2a14245963c6cbe48468125c4d4ed
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 22:22:15 2022 +0200
+
+    tiedostot file1, file2 ja file3 luotu
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 626f401fa3b95911c73310d33cccfd639d1eb050
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 22:09:45 2022 +0200
+
+    muutokset
+
+ eka.txt    | 4 +---
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+commit 5bf55704dc7db8e590c9ca6bc88db6f5a8eb846e
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 22:06:21 2022 +0200
+
+    uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2a00e90a650caf1e3f5072a0e8a924d498f543dd
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 22:03:05 2022 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit ca9846b6ff7b246e98ba21998532ded0dc6ddcc5
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 20:16:02 2022 +0200
+
+    muutokset tiedostoon tiedosto.txt
+
+ tiedosto.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit 56b85abcca83928cb8e85369d79cbb1843ea5713
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 20:13:34 2022 +0200
+
+    muutos tiedostoon tiedosto.txt
+
+ tiedosto.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 89cb105605cdb4dcd87da596de7ec74402929ef3
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 20:04:55 2022 +0200
+
+    hakemisto stuff ja tiedosto file.txt luotu
+
+ stuff/file.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 784739796d937c714570a060e30881defc45dbda
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 20:02:00 2022 +0200
+
+    muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 5461cc53be4328ac4af5d9193ff05238f960b07c
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 19:59:56 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ca493448a6fa207c6f6795d85cb8941fe2997e26
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 19:55:05 2022 +0200
+
+    toinen.txt luotu, muutos
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 8691bc0801c4d52d76053fedf512861e7cc5a56d
+Author: Vili Sirkeoja <vili.sirkeoja@gmail.com>
+Date:   Thu Mar 17 19:28:24 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
