@@ -1,7 +1,6 @@
-### Otsikko
+# Ohjelmistotekniikka, harjoitustyö
 
-Tavallista tekstiä...
+## Tehtävät
 
-**Lihavoitua tekstiä...**
+### Viikko 1
 
-*Kursivoitua tekstiä...*
