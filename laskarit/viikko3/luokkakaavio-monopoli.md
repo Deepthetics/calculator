@@ -2,12 +2,8 @@
 
 ```mermaid
 classDiagram
-classPelaaja "1" -- "1" ClassPelinappula
-classPelilauta "1" -- "40" ClassPeliruutu
-ClassPeliruutu "1" -- "1" ClassPelinappula
-class Peliruutu{
-seuraava
-}
-ClassNoppa{
-pisteluku
-}
+Pelaaja "1" -- "1" Pelinappula
+Pelilauta "1" -- "40" Peliruutu
+Peliruutu "1" -- "1" Pelinappula
+Peliruutu : seuraava
+Noppa : pisteluku
