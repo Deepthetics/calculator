@@ -23,7 +23,7 @@ sequenceDiagram
   Engine-->>Machine: True
   Machine->>Engine: use_energy()
   Engine->>FuelTank: consume(10)
-  Fueltank-->>Engine: return
+  FuelTank-->>Engine: return
   Engine-->>Machine: return
   Machine-->>Main: return
 ```
