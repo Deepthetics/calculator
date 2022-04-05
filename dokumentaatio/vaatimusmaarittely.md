@@ -22,15 +22,14 @@ Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
   - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku
   - syotetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen
 - käyttäjälle tulostetaan laskettu tulos
-
-### Jatkokehitysideat
-
-Tässä lueteltuja toiminnallisuuksia toteutetaan ajan salliessa, kun ydintoiminnallisuus on toteutettu.
-
 - lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot, derivaatta, integraali... 
 - vakiot: e, pi
 - laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen...
 - mahdollisuus luoda ja tallentaa omia funktioita
+
+### Jatkokehitysideat
+
+Tässä lueteltuja toiminnallisuuksia toteutetaan ajan salliessa, kun ydintoiminnallisuus on toteutettu.
 - mahdollisuus laskea todennäköisyyksiä erilaisista todennäköisyysjakaumista
 - mahdollisuus syöttää aineistoja ja laskea näistä tilastollisia tunnuslukuja
 - graafisen laskimen toiminnallisuus
