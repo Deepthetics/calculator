@@ -1,4 +1,4 @@
- from invoke import task
+from invoke import task
 
 @task
 def start(ctx):
@@ -6,7 +6,7 @@ def start(ctx):
 
 @task
 def test(ctx):
-    ctx.run("pytest.src", pty=True)
+    ctx.run("pytest src", pty=True)
 
 @task
 def coverage(ctx):
@@ -14,4 +14,4 @@ def coverage(ctx):
 
 @task(coverage)
 def coverage_report(ctx):
-    ctx.run("coverage.html", pty=True)
+    ctx.run("coverage html", pty=True)
