@@ -3,10 +3,10 @@ from math import sqrt
 
 class CalculatorService:
     """Sovelluslogiikasta vastaava luokka"""
-    
+
     def __init__(self):
         pass
-    
+
     def calculate(self, expression):
         """Laskee lausekkeen arvon.
 
