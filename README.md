@@ -49,8 +49,14 @@ Raportti tallentuu _htmlcov_-hakemistoon.
 
 ### Pylint
 
-Tiedostossa [.pylintrc](./.pylintrc) määritetyt laatutarkistukset voi suorittaa komennolla:
+Tiedostossa [.pylintrc](./.pylintrc) määritetyt laatutarkistukset suoritetaan komennolla:
 
 ```bash
 poetry run invoke lint
+```
+
+PEP-8 tyyliohjeiden mukainen formatointi suoritetaan komennolla:
+
+```bash
+poetry run invoke format
 ```
