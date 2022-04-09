@@ -1,4 +1,3 @@
-
 from math import sqrt
 
 
@@ -10,10 +9,10 @@ class CalculatorService:
     
     def calculate(self, expression):
         """Laskee lausekkeen arvon.
-        
+
         Args:
             expression: Merkkijonoarvo, joka kuvaa lauseketta.
-        
+
         Returns:
             Palauttaan lasketun lausekkeen arvon.
             Jos lauseketta ei voida laskea, palauttaa False.

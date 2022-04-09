@@ -1,4 +1,3 @@
-
 class UI:
     def __init__(self, calculator_service):
         self._calculator_service = calculator_service
