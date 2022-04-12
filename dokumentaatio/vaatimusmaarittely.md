@@ -20,7 +20,7 @@ Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
 
 - käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi
   - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku
-  - syotetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen
+  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen
 - käyttäjälle tulostetaan laskettu tulos
 - lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot, derivaatta, integraali... 
 - vakiot: e, pi
