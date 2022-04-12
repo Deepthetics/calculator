@@ -9,4 +9,4 @@
 - lisätty Result-luokka, joka kuvaa laskettua tulosta
 - lisätty ResultRepository-luokka, joka vastaa tiedosto-operaatioista, joita laskimen muistitoiminnallisuudet käyttävät
 - lisätty laskimen muistitoiminnallisuudet CalculatorService-luokkaan
-- lisätty toiminnallisuutta vielä väliaikaisesti käytössä olevaan tekstikäyttöliittymään
+- lisätty toiminnallisuutta vielä väliaikaisesti käytössä olevaan tekstikäyttöliittymään (graafisen käyttöliittymän suunnittelu aloitettu)
