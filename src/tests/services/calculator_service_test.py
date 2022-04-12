@@ -1,4 +1,3 @@
-
 import unittest
 from services.calculator_service import CalculatorService
 
