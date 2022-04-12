@@ -10,6 +10,12 @@ class UI:
 
             if expression == "x":
                 break
+            elif expression == "s":
+                self._calculator_service.memory_store()
+            elif expression == "r":
+                print(f"Talletettu tulos: {self._calculator_service.memory_recall()}")
+            elif expression == "c":
+                self._calculator_service.memory_clear()
             else:
                 result = self._calculator_service.calculate(expression)
                 if result:
@@ -31,6 +37,12 @@ class UI:
         print("-jakojäännös: '%'")
         print("-itseisarvo: 'abs(x)', missä 'x' on reaaliluku")
         print("-neliöjuuri: 'sqrt(x)', missä 'x' on reaaliluku")
+        print("")
+        print("Jos haluat tallettaa viimeisimmän tuloksen muistiin, syötä 's'.")
+        print("")
+        print("Jos haluat palauttaa viimeisimmän tuloksen muistista, syötä 'r'.")
+        print("")
+        print("Jos haluat tyhjentää muistin, syötä 'c'.")
         print("")
         print("Jos haluat sulkea ohjelman, syötä 'x'.")
         print("")
