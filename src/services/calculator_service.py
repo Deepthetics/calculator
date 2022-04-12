@@ -1,6 +1,8 @@
 from math import sqrt
 from entities.result import Result
-from repositories.result_repository import (result_repository as default_result_repository)
+from repositories.result_repository import (
+    result_repository as default_result_repository)
+
 
 class CalculatorService:
     """Sovelluslogiikasta vastaava luokka"""
@@ -34,8 +36,7 @@ class CalculatorService:
         last = self._result_repository.read_last()
         if last:
             return last
-        else:
-            return "muisti tyhjä"
+        return "muisti tyhjä"
 
     def memory_clear(self):
         self._result_repository.clear()

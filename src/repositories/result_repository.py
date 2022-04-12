@@ -1,6 +1,5 @@
 from pathlib import Path
 from config import RESULTS_FILE_PATH
-from entities.result import Result
 
 
 class ResultRepository:
@@ -18,10 +17,10 @@ class ResultRepository:
         """
 
         self._file_path = file_path
-    
+
     def _ensure_file_exists(self):
         Path(self._file_path).touch()
-    
+
     def write(self, result):
         """Tallettaa viimeisimmän tuloksen tiedostoon.
         """
@@ -44,7 +43,7 @@ class ResultRepository:
     def clear(self):
         """Alustaa tiedoston.
         """
-        with open(self._file_path, "w") as file:
+        with open(self._file_path, "w", encoding=("utf-8")) as file:
             file.truncate()
 
 

@@ -1,6 +1,3 @@
-from multiprocessing.sharedctypes import Value
-
-
 class Result:
     """Luokka, joka kuvaa yksittäistä laskettua tulosta.
 

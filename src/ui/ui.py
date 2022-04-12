@@ -13,7 +13,8 @@ class UI:
             elif expression == "s":
                 self._calculator_service.memory_store()
             elif expression == "r":
-                print(f"Talletettu tulos: {self._calculator_service.memory_recall()}")
+                print(
+                    f"Talletettu tulos: {self._calculator_service.memory_recall()}")
             elif expression == "c":
                 self._calculator_service.memory_clear()
             else:
