@@ -10,7 +10,7 @@ Sovelluksella on alustavan suunnitelman mukaan vain yhdenlaisia käyttäjiä sam
 
 ## Käyttöliittymä
 
-Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä.
+Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. ###Suunnittelu aloitettu
 
 ## Suunnitellut toiminnallisuudet
 
@@ -18,13 +18,13 @@ Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä.
 
 Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
 
-- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi
-  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku
-  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen
-- käyttäjälle tulostetaan laskettu tulos
-- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot, derivaatta, integraali... 
+- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi ###Tehty
+  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku ###Tehty
+  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen ###Tehty
+- käyttäjälle tulostetaan laskettu tulos ###Tehty
+- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot, derivaatta, integraali... ###Tehty osittain
 - vakiot: e, pi
-- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen...
+- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen... ###Tehty osittain
 - mahdollisuus luoda ja tallentaa omia funktioita
 
 ### Jatkokehitysideat
