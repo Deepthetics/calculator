@@ -10,10 +10,10 @@ Sovelluksella on alustavan suunnitelman mukaan vain yhdenlaisia käyttäjiä sam
 
 ## Käyttöliittymä
 
-Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. **Tehty**
+Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. **#Tehty**
   
-  - elementit ja näykymä laskutoimitusten syöttämistä ja tulostamista varten **Tehty**
-  - elementit laskimen muistitoiminnallisuuksia varten **Tehty**
+  - elementit ja näykymä laskutoimitusten syöttämistä ja tulostamista varten **#Tehty**
+  - elementit laskimen muistitoiminnallisuuksia varten **#Tehty**
   - elementit ja näkymä laskimen laskuhistoriaa varten
 
 ## Suunnitellut toiminnallisuudet
@@ -22,13 +22,13 @@ Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. **Tehty**
 
 Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
 
-- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi **Tehty**
-  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku **Tehty**
-  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen **Tehty**
-- käyttäjälle tulostetaan laskettu tulos **Tehty**
-- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot **Tehty osittain**
+- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi **#Tehty**
+  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku **#Tehty**
+  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen **#Tehty**
+- käyttäjälle tulostetaan laskettu tulos **#Tehty**
+- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot **#Tehty osittain**
 - vakiot: e, pi
-- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen **Tehty**
+- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen **#Tehty**
 - laskuhistoria (toteutetaan muistitoiminnallisuuksien rinnalle tai niiden korvaajaksi):
   - käyttäjä näkee laskemansa laskutoimitukset ja niiden tulokset sekä pystyy suoraan syöttämään jo laskettuja tuloksia uusiin laskutoimituksiin
   - käyttäjä pystyy poistamaan laskuhistoriasta yksittäisiä laskutoimituksia/tuloksia tai tyhjentämään laskuhistorian kokonaan
