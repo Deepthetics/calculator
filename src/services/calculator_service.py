@@ -41,4 +41,5 @@ class CalculatorService:
     def memory_clear(self):
         self._result_repository.clear()
 
+
 calculator_service = CalculatorService()

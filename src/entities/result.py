@@ -7,7 +7,7 @@ class Result:
         description: Merkkijonoarvo, joka kuvaa, mihin laskuun tulos liittyy.
     """
 
-    def __init__(self, value, id="", description=""):
+    def __init__(self, value, description=""):
         """Luokan konstruktori, joka luo uuden tulosta kuvaavan olion.
 
         Args:
@@ -21,5 +21,4 @@ class Result:
         """
 
         self.value = value
-        self.id = id
         self.description = description
