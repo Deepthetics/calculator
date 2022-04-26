@@ -1,5 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+## Release
+
+[Release](https://github.com/Deepthetics/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Dokumentaatio
 - [Arkkitehtuurikuvaus](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 - [Changelog](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
