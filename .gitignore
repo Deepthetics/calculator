@@ -4,4 +4,4 @@ __pycache__
 htmlcov
 
 #data files:
-data/test.results.csv
+data/test-results.csv
