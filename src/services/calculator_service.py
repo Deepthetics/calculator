@@ -26,7 +26,7 @@ class CalculatorService:
             result = eval(expression)
             self._last_result = Result(value=result)
             return result
-        except NameError:
+        except (NameError, SyntaxError):
             return False
 
     def memory_store(self):
@@ -36,7 +36,9 @@ class CalculatorService:
         last = self._result_repository.read_last()
         if last:
             return last
-        return "muisti tyhjä"
+        return False
 
     def memory_clear(self):
         self._result_repository.clear()
+
+calculator_service = CalculatorService()
