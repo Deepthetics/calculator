@@ -11,4 +11,10 @@
 | 11.04. | 3   | konfigurointitiedostejen luonti, sovelluslogiikan toteutus (laskimen muistitoiminnallisuudet, tiedostoon tallentaminen), dokumentaatio |
 | 12.04. | 3   | sovelluslogiikan toteutus (laskimen muistitoiminnallisuudet, tiedostoon tallentaminen), graafisen käyttöliittymän suunnittelu |
 | 12.04. | 2   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
-| yht.   | 22  | |
+| 20.04. | 2   | graafisen käyttöliittymän suunnittelu ja tarvittaviin kirjastoihin perehtyminen |
+| 21.04. | 5   | graafisen käyttöliittymän suunnittelu ja toteutus sekä tarvittaviin kirjastoihin perehtyminen |
+| 22.04. | 3   | graafisen käyttöliittymän toteutus |
+| 24.04. | 3   | graafisen käyttöliittymän toteutus |
+| 25.04. | 4   | graafisen käyttöliittymän toteutus ja korjaukset sovelluslogiikkaan |
+| 26.04. | 2   | dokumentaatio |
+| yht.   | 41  | |
