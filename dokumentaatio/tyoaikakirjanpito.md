@@ -16,5 +16,5 @@
 | 22.04. | 3   | graafisen käyttöliittymän toteutus |
 | 24.04. | 3   | graafisen käyttöliittymän toteutus |
 | 25.04. | 4   | graafisen käyttöliittymän toteutus ja korjaukset sovelluslogiikkaan |
-| 26.04. | 2   | dokumentaatio |
-| yht.   | 41  | |
+| 26.04. | 3   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
+| yht.   | 42  | |
