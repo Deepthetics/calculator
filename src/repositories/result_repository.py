@@ -22,10 +22,10 @@ class ResultRepository:
         Path(self._file_path).touch()
 
     def write(self, result):
-        """Tallettaa viimeisimmän tuloksen tiedostoon.
+        """Tallettaa tuloksen tiedostoon.
         """
         with open(self._file_path, "w", encoding="utf-8") as file:
-            row = f"{result.value};{result.id};{result.description}"
+            row = f"{result.value};{result.description}"
             file.write(row+"\n")
 
     def read_last(self):
