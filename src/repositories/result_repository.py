@@ -25,7 +25,7 @@ class ResultRepository:
         """Tallettaa tuloksen tiedostoon.
         """
         with open(self._file_path, "w", encoding="utf-8") as file:
-            row = f"{result.value};{result.description}"
+            row = f"{result.value}"
             file.write(row+"\n")
 
     def read_last(self):
@@ -37,8 +37,7 @@ class ResultRepository:
             results = file.readlines()
             if not results:
                 return False
-            parts = results[-1].split(";")
-            return parts[0]
+            return results[-1]
 
     def clear(self):
         """Alustaa tiedoston.

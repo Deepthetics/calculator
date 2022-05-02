@@ -9,5 +9,8 @@ try:
 except FileNotFoundError:
     pass
 
+EQUATIONS_FILENAME = os.getenv("EQUATIONS_FILENAME") or "equations.csv"
+EQUATIONS_FILE_PATH = os.path.join(dirname, "..", "data", EQUATIONS_FILENAME)
+
 RESULTS_FILENAME = os.getenv("RESULTS_FILENAME") or "results.csv"
 RESULTS_FILE_PATH = os.path.join(dirname, "..", "data", RESULTS_FILENAME)

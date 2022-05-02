@@ -1,6 +1,6 @@
 from tkinter import Tk
 from services.calculator_service import CalculatorService
-from ui.gui import UI
+from ui.ui import UI
 
 # Old text-based UI main
 # def main():
