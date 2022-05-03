@@ -3,7 +3,7 @@ from config import RESULTS_FILE_PATH
 
 
 class ResultRepository:
-    """Luokka, joka vastaa tiedosto-operaatioista.
+    """Luokka, joka vastaa laskimen muistiin ja Result-olioihin liittyvistä tiedosto-operaatioista.
 
     Attributes:
         file_path: Merkkijonoarvo, joka kuvaa käytettävän tiedoston polkua.
@@ -21,15 +21,21 @@ class ResultRepository:
     def _ensure_file_exists(self):
         Path(self._file_path).touch()
 
-    def write(self, result):
+    def store(self, result):
         """Tallettaa tuloksen tiedostoon.
+
+        Args:
+            result: Result-luokan olio.
         """
         with open(self._file_path, "w", encoding="utf-8") as file:
             row = f"{result.value}"
             file.write(row+"\n")
 
-    def read_last(self):
+    def recall(self):
         """Palauttaa tiedoston viimeisimmän rivin.
+
+        Returns:
+            Palauttaa tuloksen merkkijonoarvona.
         """
         self._ensure_file_exists()
 
@@ -39,7 +45,7 @@ class ResultRepository:
                 return False
             return results[-1]
 
-    def clear(self):
+    def delete_all(self):
         """Alustaa tiedoston.
         """
         with open(self._file_path, "w", encoding=("utf-8")) as file:

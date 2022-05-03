@@ -1,19 +1,13 @@
 from tkinter import Tk
-from services.calculator_service import CalculatorService
 from ui.ui import UI
-
-# Old text-based UI main
-# def main():
-#calculator_service = CalculatorService()
-#ui = UI(calculator_service)
-# ui.start()
+from services.calculator_service import CalculatorService
 
 
 def main():
     window = Tk()
     window.title("Calculator")
-
     calculator_service = CalculatorService()
+
     ui_view = UI(window, calculator_service)
     ui_view.initialize()
 

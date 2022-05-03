@@ -22,8 +22,8 @@ class CalculatorService:
     """
 
     def __init__(
-        self, 
-        equation_repository=default_equation_repository, 
+        self,
+        equation_repository=default_equation_repository,
         result_repository=default_result_repository
     ):
         """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan olion.
@@ -55,7 +55,7 @@ class CalculatorService:
             return result
         except (NameError, SyntaxError):
             return False
-    
+
     def _store_equation(self, equation):
         """Tallettaa lasketusta lausekkeesta uuden merkinnän laskuhistoriaan.
 
@@ -78,16 +78,22 @@ class CalculatorService:
         self._equation_repository.delete_all()
 
     def memory_store(self):
-        self._result_repository.write(self._last_result)
+        """Tallettaa viimeksi lasketun tuloksen laskimen muistiin.
+        """
+        self._result_repository.store(self._last_result)
 
     def memory_recall(self):
-        last = self._result_repository.read_last()
+        """Palauttaa viimeksi talletetun tuloksen laskimen muistista.
+        """
+        last = self._result_repository.recall()
         if last:
             return last
         return False
 
     def memory_clear(self):
-        self._result_repository.clear()
+        """Alustaa laskimen muistin.
+        """
+        self._result_repository.delete_all()
 
 
 calculator_service = CalculatorService()

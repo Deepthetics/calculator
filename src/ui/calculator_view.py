@@ -1,30 +1,89 @@
 from tkinter import *
 import tkinter.font as font
+from services.calculator_service import calculator_service
 
 
-class UI:
-    def __init__(self, root, calculator_service):
+class CalculatorView:
+    def __init__(self, root, handle_open_history_view, entry_content, history_view_result=None):
         self._root = root
-        self._input_entry = None
+        self._handle_open_history_view = handle_open_history_view
+        self.frame = None
+        self.entry = None
+        self._entry_content = entry_content
+        self._history_view_result = history_view_result
         self._button_frame = None
         self._button_font = font.Font(size=14)
-        self._calculator_service = calculator_service
 
-    def initialize_input_entry(self):
-        input_font = font.Font(size=24, weight="bold")
+        self._initialize()
 
-        self._input_entry = Entry(
-            master=self._root, bd=0, cursor="arrow", font=input_font, justify=RIGHT)
-        self._input_entry.grid(column=0, row=0, padx=3, pady=3, sticky="nsew")
+    def destroy_view(self):
+        self.frame.destroy()
 
-    def initialize_button_frame(self):
-        self._button_frame = Frame(master=self._root)
+    def _handle_input_button_click(self, button_text):
+        content = self.entry.get()
+        if content == "Invalid input":
+            self._handle_clear_button_click()
+        self.entry.insert(END, button_text)
+
+    def _handle_equality_button_click(self):
+        expression = self.entry.get()
+        self.entry.delete(0, END)
+        result = calculator_service.calculate(expression)
+
+        if result:
+            self.entry.insert(0, result)
+        else:
+            self.entry.insert(0, "Invalid input")
+
+    def _handle_backspace_button_click(self):
+        content = self.entry.get()
+        if content == "Invalid input":
+            self._handle_clear_button_click()
+        else:
+            self.entry.delete(len(self.entry.get())-1)
+
+    def _handle_clear_button_click(self):
+        self.entry.delete(0, END)
+
+    def _handle_ms_button_click(self):
+        calculator_service.memory_store()
+
+    def _handle_mr_button_click(self):
+        last = calculator_service.memory_recall()
+        if last:
+            self.entry.insert(END, last)
+
+    def _handle_mc_button_click(self):
+        calculator_service.memory_clear()
+
+    def _initialize_frame(self):
+        self.frame = Frame(master=self._root)
+        self.frame.grid(column=0, row=0, sticky="nsew")
+        self.frame.columnconfigure(0, weight=1)
+        self.frame.rowconfigure(0, weight=1)
+        self.frame.rowconfigure(1, weight=1)
+
+    def _initialize_entry(self):
+        entry_font = font.Font(size=24, weight="bold")
+
+        self.entry = Entry(
+            master=self.frame, bd=0, cursor="arrow", font=entry_font, justify=RIGHT)
+        self.entry.grid(column=0, row=0, padx=3, pady=3, sticky="nsew")
+
+        if self._history_view_result:
+            self.entry.insert(0, self._entry_content +
+                              str(self._history_view_result))
+        else:
+            self.entry.insert(0, self._entry_content)
+
+    def _initialize_button_frame(self):
+        self._button_frame = Frame(master=self.frame)
         self._button_frame.grid(column=0, row=1, padx=(
             3, 3), pady=(0, 3), sticky="nsew")
         self._button_frame.columnconfigure([0, 1, 2, 3, 4], weight=1)
         self._button_frame.rowconfigure([0, 1, 2, 3, 4, 5], weight=1)
 
-    def initialize_digit_buttons(self):
+    def _initialize_digit_buttons(self):
         digit_font = font.Font(size=14, weight="bold")
 
         digit_0 = Button(master=self._button_frame, text="0", bg="#FCFCFC", font=digit_font, relief=GROOVE,
@@ -71,12 +130,12 @@ class UI:
                                activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("."))
         decimal_point.grid(column=1, row=5, sticky="nsew")
 
-    def initialize_equality_button(self):
+    def _initialize_equality_button(self):
         equality_button = Button(master=self._button_frame, text="=", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                                  activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=self._handle_equality_button_click)
         equality_button.grid(column=2, row=5, sticky="nsew")
 
-    def initialize_operator_buttons(self):
+    def _initialize_operator_buttons(self):
         plus_button = Button(master=self._button_frame, text="+", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                              activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("+"))
         plus_button.grid(row=5, column=3, sticky="nsew")
@@ -113,7 +172,7 @@ class UI:
                             activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("log("))
         log_button.grid(row=1, column=4, sticky="nsew")
 
-    def initialize_parenthesis_buttons(self):
+    def _initialize_parenthesis_buttons(self):
         left_parenthisis = Button(master=self._button_frame, text="(", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                                   activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("("))
         left_parenthisis.grid(column=0, row=1, sticky="nsew")
@@ -122,17 +181,17 @@ class UI:
                                    activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click(")"))
         right_parenthisis.grid(column=1, row=1, sticky="nsew")
 
-    def initialize_backspace_button(self):
+    def _initialize_backspace_button(self):
         backspace_button = Button(master=self._button_frame, text=u"\u232B", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                                   activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=self._handle_backspace_button_click)
         backspace_button.grid(column=4, row=0, sticky="nsew")
 
-    def initialize_clear_button(self):
+    def _initialize_clear_button(self):
         clear_button = Button(master=self._button_frame, text="C", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                               activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=self._handle_clear_button_click)
         clear_button.grid(column=3, row=0, sticky="nsew")
 
-    def initialize_memory_buttons(self):
+    def _initialize_memory_buttons(self):
         memory_store = Button(master=self._button_frame, text="MS", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                               activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=self._handle_ms_button_click)
         memory_store.grid(column=2, row=0, sticky="nsew")
@@ -145,7 +204,7 @@ class UI:
                               activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=self._handle_mc_button_click)
         memory_clear.grid(column=0, row=0, sticky="nsew")
 
-    def initialize_constant_buttons(self):
+    def _initialize_constant_buttons(self):
         e_button = Button(master=self._button_frame, text="e", bg="#FCFCFC", font=self._button_font, relief=GROOVE,
                           activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("e"))
         e_button.grid(column=2, row=1, sticky="nsew")
@@ -154,59 +213,15 @@ class UI:
                            activebackground="#C8C8C8", height=1, width=2, padx=0, pady=0, command=lambda: self._handle_input_button_click("pi"))
         pi_button.grid(column=3, row=1, sticky="nsew")
 
-    def configure_root(self):
-        self._root.columnconfigure(0, weight=1)
-        self._root.rowconfigure(0, weight=1)
-        self._root.rowconfigure(1, weight=1)
-        self._root.geometry("320x480")
-        self._root.minsize(320, 480)
-
-    def initialize(self):
-        self.configure_root()
-        self.initialize_input_entry()
-        self.initialize_button_frame()
-        self.initialize_digit_buttons()
-        self.initialize_equality_button()
-        self.initialize_operator_buttons()
-        self.initialize_parenthesis_buttons()
-        self.initialize_backspace_button()
-        self.initialize_clear_button()
-        self.initialize_memory_buttons()
-        self.initialize_constant_buttons()
-
-    def _handle_input_button_click(self, button_text):
-        content = self._input_entry.get()
-        if content == "Invalid input":
-            self._handle_clear_button_click()
-        self._input_entry.insert(END, button_text)
-
-    def _handle_equality_button_click(self):
-        expression = self._input_entry.get()
-        self._input_entry.delete(0, END)
-        result = self._calculator_service.calculate(expression)
-
-        if result:
-            self._input_entry.insert(0, result)
-        else:
-            self._input_entry.insert(0, "Invalid input")
-
-    def _handle_backspace_button_click(self):
-        content = self._input_entry.get()
-        if content == "Invalid input":
-            self._handle_clear_button_click()
-        else:
-            self._input_entry.delete(len(self._input_entry.get())-1)
-
-    def _handle_clear_button_click(self):
-        self._input_entry.delete(0, END)
-
-    def _handle_ms_button_click(self):
-        self._calculator_service.memory_store()
-
-    def _handle_mr_button_click(self):
-        last = self._calculator_service.memory_recall()
-        if last:
-            self._input_entry.insert(END, last)
-
-    def _handle_mc_button_click(self):
-        self._calculator_service.memory_clear()
+    def _initialize(self):
+        self._initialize_frame()
+        self._initialize_entry()
+        self._initialize_button_frame()
+        self._initialize_digit_buttons()
+        self._initialize_equality_button()
+        self._initialize_operator_buttons()
+        self._initialize_parenthesis_buttons()
+        self._initialize_backspace_button()
+        self._initialize_clear_button()
+        self._initialize_memory_buttons()
+        self._initialize_constant_buttons()

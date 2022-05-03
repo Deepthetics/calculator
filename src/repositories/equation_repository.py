@@ -50,7 +50,7 @@ class EquationRepository:
                 expression = attributes[0]
                 result = attributes[1]
                 equations.append(Equation(expression, result))
-            
+
             return equations
 
     def delete_all(self):
@@ -58,6 +58,6 @@ class EquationRepository:
         """
         with open(self._file_path, "w", encoding=("utf-8")) as file:
             file.truncate()
-    
+
 
 equation_repository = EquationRepository(EQUATIONS_FILE_PATH)
