@@ -14,7 +14,7 @@ Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. **#Tehty**
   
   - elementit ja näykymä laskutoimitusten syöttämistä ja tulostamista varten **#Tehty**
   - elementit laskimen muistitoiminnallisuuksia varten **#Tehty**
-  - elementit ja näkymä laskimen laskuhistoriaa varten
+  - elementit ja näkymä laskimen laskuhistoriaa varten **#Tehty**
 
 ## Suunnitellut toiminnallisuudet
 
@@ -27,9 +27,9 @@ Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
   - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen **#Tehty**
 - käyttäjälle tulostetaan laskettu tulos **#Tehty**
 - lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot **#Tehty osittain**
-- vakiot: e, pi
+- vakiot: e, pi **#Tehty**
 - laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen **#Tehty**
-- laskuhistoria (toteutetaan muistitoiminnallisuuksien rinnalle tai niiden korvaajaksi):
+- laskuhistoria (toteutetaan muistitoiminnallisuuksien rinnalle tai niiden korvaajaksi): **#Tehty suurimmilta osin**
   - käyttäjä näkee laskemansa laskutoimitukset ja niiden tulokset sekä pystyy suoraan syöttämään jo laskettuja tuloksia uusiin laskutoimituksiin
   - käyttäjä pystyy poistamaan laskuhistoriasta yksittäisiä laskutoimituksia/tuloksia tai tyhjentämään laskuhistorian kokonaan
 - mahdollisuus laskea todennäköisyyksiä erilaisista todennäköisyysjakaumista
@@ -38,6 +38,5 @@ Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
 
 Tässä lueteltuja toiminnallisuuksia toteutetaan ajan salliessa, kun ydintoiminnallisuus on toteutettu.
 
-- mahdollisuus luoda ja tallentaa omia funktioita
 - mahdollisuus syöttää aineistoja ja laskea näistä tilastollisia tunnuslukuja
 - graafisen laskimen toiminnallisuus
