@@ -15,7 +15,7 @@ Pakkaus entities sisältää ohjelman käyttämistä tietoa kuvaavista ja säily
 
 ...
 
-##Sovelluksen käyttämän tiedon pysyväistallennus
+## Sovelluksen käyttämän tiedon pysyväistallennus
 
 ...
 
