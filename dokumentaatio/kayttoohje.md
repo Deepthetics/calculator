@@ -21,4 +21,8 @@ poetry run invoke start
 
 ## Sovelluksen käyttäminen
 
+Sovellus avautuu laskinnäkymään:
+
+![](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/laskin.png)
+
 ### Laskinnäkymän käyttäminen:
