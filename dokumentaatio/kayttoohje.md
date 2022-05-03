@@ -21,3 +21,4 @@ poetry run invoke start
 
 ## Sovelluksen käyttäminen
 
+### Laskinnäkymän käyttäminen:
