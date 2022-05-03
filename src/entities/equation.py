@@ -11,8 +11,8 @@ class Equation:
 
         Args:
             expression: Merkkijonoarvo, joka kuvaa lauseketta.
-            result: Merkkijonoarvo, joka kuvaa lasketun lausekkeen tulosta.
+            result: Float-arvo, joka kuvaa lasketun lausekkeen tulosta.
         """
-        
+
         self.expression = expression
         self.result = result
