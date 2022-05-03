@@ -16,5 +16,11 @@
 | 22.04. | 3   | graafisen käyttöliittymän toteutus |
 | 24.04. | 3   | graafisen käyttöliittymän toteutus |
 | 25.04. | 4   | graafisen käyttöliittymän toteutus ja korjaukset sovelluslogiikkaan |
-| 26.04. | 3   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
-| yht.   | 42  | |
+| 26.04. | 2   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
+| 01.05. | 3   | sovelluslogiikan suunnittelu ja toteutus (laskuhistoriaan liittyvä toiminnallisuus ja laskimen uudet toiminnot) |
+| 01.05. | 1   | käytettävyyden parantaminen |
+| 02.05. | 3   | käyttöliittymän laajennuksen suunnittelu ja toteutus (laskuhistoriaan liittyvä näkymä) |
+| 02.05. | 2   | käyttöliittymän ohjelmakoodin rakenteen muuttaminen tukemaan uusien näkymien lisäämistä ja sovelluksen laajenemista |
+| 03.05. | 3   | käyttöliittymän laajennuksen toteutus (laskuhistoriaan liittyvä näkymä) |
+| 03.05. | 3   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
+| yht.   | 57  | |
