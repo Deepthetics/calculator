@@ -9,7 +9,7 @@ class Result:
         """Luokan konstruktori, joka luo uuden tulosta kuvaavan olion.
 
         Args:
-            value: Float-arvo, joka kuvaa tuloksen arvoa.   
+            value: Float-arvo, joka kuvaa tuloksen arvoa.
         """
 
         self.value = value

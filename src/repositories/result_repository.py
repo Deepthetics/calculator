@@ -27,7 +27,7 @@ class ResultRepository:
         Args:
             result: Result-luokan olio.
         """
-        with open(self._file_path, "w", encoding="utf-8") as file:
+        with open(self._file_path, "a", encoding="utf-8") as file:
             row = f"{result.value}"
             file.write(row+"\n")
 
@@ -41,6 +41,7 @@ class ResultRepository:
 
         with open(self._file_path, encoding="utf-8") as file:
             results = file.readlines()
+
             if not results:
                 return False
             return results[-1]

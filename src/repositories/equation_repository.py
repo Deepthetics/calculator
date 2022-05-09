@@ -30,7 +30,7 @@ class EquationRepository:
         """
         self._ensure_file_exists()
 
-        with open(self._file_path, "w", encoding="utf-8") as file:
+        with open(self._file_path, "a", encoding="utf-8") as file:
             row = f"{equation.expression};{equation.result}"
             file.write(row+"\n")
 
@@ -51,10 +51,12 @@ class EquationRepository:
                 result = attributes[1]
                 equations.append(Equation(expression, result))
 
+            if not equations:
+                return False
             return equations
 
     def delete_all(self):
-        """Alustaa laskuhistoriaa vastaavan tiedoston. 
+        """Alustaa laskuhistoriaa vastaavan tiedoston.
         """
         with open(self._file_path, "w", encoding=("utf-8")) as file:
             file.truncate()

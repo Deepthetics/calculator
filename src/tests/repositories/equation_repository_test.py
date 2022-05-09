@@ -14,15 +14,15 @@ class TestEquationRepository(unittest.TestCase):
         equations = equation_repository.get_all()
         self.assertEqual(int(equations[0].result), 10)
 
-    # def test_get_all_returns_all_equations(self):
-        # equation_repository.store(self.equation_a)
-        # equation_repository.store(self.equation_b)
-        #equations = equation_repository.get_all()
-        #self.assertEqual(int(equations[0].result), 10)
-        #self.assertEqual(int(equations[1].result), 20)
+    def test_get_all_returns_all_equations(self):
+        equation_repository.store(self.equation_a)
+        equation_repository.store(self.equation_b)
+        equations = equation_repository.get_all()
+        self.assertEqual(int(equations[0].result), 10)
+        self.assertEqual(int(equations[1].result), 20)
 
-    # def test_delete_all_formats_file(self):
-        # equation_repository.store(self.equation_a)
-        # equation_repository.store(self.equation_b)
-        # equation_repository.delete_all()
-        #self.assertEqual(equation_repository.get_all, [])
+    def test_delete_all_formats_file(self):
+        equation_repository.store(self.equation_a)
+        equation_repository.store(self.equation_b)
+        equation_repository.delete_all()
+        self.assertEqual(equation_repository.get_all(), False)
