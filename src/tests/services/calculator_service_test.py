@@ -11,7 +11,7 @@ class TestCalculatorService(unittest.TestCase):
         self.assertEqual(self.calculator_service.calculate(
             valid_expression), 11.0)
 
-    def test_calculate_with_unvalid_input(self):
+    def test_calculate_with_invalid_input(self):
         invalid_expression = "invalid"
         self.assertEqual(self.calculator_service.calculate(
             invalid_expression), False)

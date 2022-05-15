@@ -21,6 +21,9 @@ class TestResultRepository(unittest.TestCase):
         value = result_repository.recall()
         self.assertEqual(int(value), 20)
 
+    def test_recall_returns_false_correctly(self):
+        self.assertEqual(result_repository.recall(), False)
+
     def test_delete_all_formats_file(self):
         result_repository.store(self.result_a)
         result_repository.store(self.result_b)

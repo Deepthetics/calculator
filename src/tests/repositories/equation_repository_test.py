@@ -21,6 +21,9 @@ class TestEquationRepository(unittest.TestCase):
         self.assertEqual(int(equations[0].result), 10)
         self.assertEqual(int(equations[1].result), 20)
 
+    def test_get_all_returns_false_correctly(self):
+        self.assertEqual(equation_repository.get_all(), False)
+
     def test_delete_all_formats_file(self):
         equation_repository.store(self.equation_a)
         equation_repository.store(self.equation_b)

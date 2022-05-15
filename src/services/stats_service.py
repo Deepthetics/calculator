@@ -32,7 +32,9 @@ class StatsService:
         except ValueError:
             return False
 
-        return round(norm.cdf(x=point, loc=mean, scale=std), 5)
+        if std > 0:
+            return round(norm.cdf(x=point, loc=mean, scale=std), 5)
+        return False
 
 
 stats_service = StatsService()
