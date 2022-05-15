@@ -22,3 +22,8 @@
 - käyttöliittymään käytettävyyttä parannettu (erityisesti sopimattoman syötteen jälkeen uusien laskutoimitusten syöttäminen nyt helpompaa)
 - toteuttu laskuhistorianäkymää vastaava luokka HistoryView käyttöliittymään ja mahdollisuus siirtyä eri näkymien välillä (tämä näkymä ei ole vielä oletusarvoisesti käytössä bugien ja vähäisen testaamisen vuoksi)
 - testattu, että tiedosto-operaatioista vastaaviin Repository-luokkiin toteutettu toiminnallisuus toimii oikein
+
+## Loppupalautus
+- lisätty laskuhistorianäkymää vastaava luokka HistoryView
+- lisätty luokka StatsView
+- lisätty StatsService-luokka, joka vastaa StatsView-näkymän tarjoamasta toiminnallisuudesta
