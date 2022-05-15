@@ -14,4 +14,3 @@ class Result:
 
         self.value = value
         self.index = index
-        
