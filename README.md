@@ -6,9 +6,10 @@
 
 ## Dokumentaatio
 - [Käyttöohje](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+- [Vaatimusmäärittely](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 - [Changelog](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
-- [Vaatimusmäärittely](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Testausdokumentti](https://github.com/Deepthetics/ot-harjoitustyo/edit/master/dokumentaatio/testaus.md)
 - [Työaikakirjanpito](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Asennus
