@@ -2,7 +2,7 @@
 
 ## Release
 
-[Release](https://github.com/Deepthetics/ot-harjoitustyo/releases/tag/viikko6)
+[Release](https://github.com/Deepthetics/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Dokumentaatio
 - [Käyttöohje](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
