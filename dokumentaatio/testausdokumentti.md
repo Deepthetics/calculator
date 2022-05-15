@@ -14,7 +14,9 @@ Tiedon pysyväistalletuksesta vastaavaa luokkaa [EquationRepository](https://git
 
 ### Testauskattavuus
 
-Käyttöliittymän lähdekoodia lukuunottamatta sovelluksen testauksen haarautumakattavuus on...
+Käyttöliittymän lähdekoodia lukuunottamatta sovelluksen testien haarautumakattavuus on 90%.
+
+![](https://github.com/Deepthetics/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/coverage.png)
 
 ## Järjestelmätestaus
 
@@ -30,4 +32,4 @@ Sovellus on asennettu [käyttöohjeen](https://github.com/Deepthetics/ot-harjoit
 
 ## Tiedostetut ongelmat sovelluksen toiminnassa
 
-...
+Järjestelmätestauksessa huomattiin, että Calculator-näkymän näyttöön tulostuu "Invalid inpu", jos lasketun lausekkeen arvo on 0. Syy tähän on selvillä, mutta tätä ei ehditty korjaamaan, koska se havaittiin viimeisten sovellukseen tehtyjen muutosten jälkeen vasta hiljattain.
