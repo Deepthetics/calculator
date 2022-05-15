@@ -32,4 +32,4 @@ Sovellus on asennettu [käyttöohjeen](https://github.com/Deepthetics/ot-harjoit
 
 ## Tiedostetut ongelmat sovelluksen toiminnassa
 
-Järjestelmätestauksessa huomattiin, että Calculator-näkymän näyttöön tulostuu "Invalid inpu", jos lasketun lausekkeen arvo on 0. Syy tähän on selvillä, mutta tätä ei ehditty korjaamaan, koska se havaittiin viimeisten sovellukseen tehtyjen muutosten jälkeen vasta hiljattain.
+Järjestelmätestauksessa huomattiin, että Calculator-näkymän näyttöön tulostuu "Invalid input", jos lasketun lausekkeen arvo on 0. Syy tähän on selvillä, mutta tätä ei ehditty korjaamaan, koska se havaittiin viimeisten sovellukseen tehtyjen muutosten jälkeen vasta hiljattain.
