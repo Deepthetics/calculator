@@ -23,4 +23,10 @@
 | 02.05. | 2   | käyttöliittymän ohjelmakoodin rakenteen muuttaminen tukemaan uusien näkymien lisäämistä ja sovelluksen laajenemista |
 | 03.05. | 3   | käyttöliittymän laajennuksen toteutus (laskuhistoriaan liittyvä näkymä) |
 | 03.05. | 3   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
-| yht.   | 57  | |
+| 09.05. | 2   | bugien etsiminen ja korjaaminen |
+| 11.05. | 1   | sovelluslogiikan suunnittelu ja toteutus (laskuhistoria) |
+| 12.05. | 2   | käyttöliittymän toteutus (laskuhistoria) |
+| 14.05. | 4   | käyttöliittymän toteutus (todennäköisyysjakaumiin liittyvä näkymä), sovelluslogiikan suunnittelu ja toteutus (normaalijakauman kertymäfunktio) |
+| 14.05. | 1   | dokumentaatio |
+| 15.05. | 6   | yksikkötestien kirjoittaminen/testaaminen, dokumentaatio |
+| yht.   | 73  | |
