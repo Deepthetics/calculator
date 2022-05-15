@@ -59,23 +59,65 @@ Tulosta kuvaa "result.value".
 
 Tässä osiossa kuvataan sekvenssikaavioilla sovelluksen toimintalogiikkaa päätoiminnallisuuksien osalta.
 
-### Lausekkeen laskeminen
+### Lausekkeen laskeminen Calculator-näkymässä
 
-Kun käyttäjä on klikkaillut tai kirjoittanut lausekkeen käyttöliittymän syötekenttään ja klikkaa näppäintä "=", etenee sovelluksen kontrolli seuraavasti:
+Kun käyttäjä on klikkaillut tai kirjoittanut lausekkeen käyttöliittymän syötekenttään ja klikkaa painiketta "=", etenee sovelluksen kontrolli seuraavasti:
 
 ```mermaid
 sequenceDiagram
   actor User
-  participant UI
+  participant CalculatorView
   participant CalculatorService
+  participant EquationRepository
+  participant Equation
   participant Result
   Note over User: click "=" button
-  User->>UI: handle_equality_button_click()
-  UI->>CalculatorService: calculate("2+3")
+  User->>CalculatorView: handle_equality_button_click()
+  CalculatorView->>CalculatorService: calculate("2+3")
+  CalculatorService->>Equation: Equation("2+3", 5)
+  Equation-->>CalculatorService: equation
+  CalculatorService->>EquationRepository: store_equation(equation)
   CalculatorService->>Result: Result(5)
-  CalculatorService-->>UI: 5
+  CalculatorService-->>CalculatorView: 5
 ```
-Käyttöliittymästä vastaavan `UI`-luokan tapahtumankäsittelijä `handle_equality_button_click` kutsuu sovelluslogiikasta vastaavan `CalculatorService`-luokan metodia `calculate`, jolle annetaan parametrina käyttäjän syöttämä lauseke. Metodi `calculate` luo uuden `Result`-luokan olion vastaamaan laskettua tulosta, jotta se voidaan tarvittaessa tallettaa laskimen muistiin. Tämän jälkeen metodi `calculate` palauttaa lasketun tuloksen käyttöliittymälle, joka päivittää näkymänsä niin, että käyttäjä näkee tuloksen.
+
+Calculator-näkymästä vastaavan `CalculatorView`-luokan tapahtumankäsittelijä `handle_equality_button_click` kutsuu sovelluslogiikasta vastaavan `CalculatorService`-luokan metodia `calculate`, jolle annetaan parametrina käyttäjän syöttämä lauseke. Metodi `calculate` luo uuden `Equation`-luokan olion vastaamaan laskettua lauseketta ja pysyväistallettaa tämän tiedon tiedostoon kutsumalla `EquationRepository`-luokan metodia `store_equation`.  Metodi `calculate` luo myös uuden `Result`-luokan olion vastaamaan laskettua tulosta, jotta se voidaan tarvittaessa tallettaa laskimen muistiin. Tämän jälkeen metodi `calculate` palauttaa lasketun tuloksen käyttöliittymälle, joka päivittää näkymänsä niin, että käyttäjä näkee tuloksen.
+
+### Laskuhistorian tyhjentäminen History-näkymässä
+
+Kun käyttäjä klikkaa painiketta "Clear History", etenee sovelluksen kontrolli seuraavasti:
+
+```mermaid
+sequenceDiagram
+  actor User
+  participant HistoryView
+  participant CalculatorService
+  participant EquationRepository
+  Note over User: click "Clear History" button
+  User->>HistoryView: handle_clear_button_click()
+  HistoryView->>CalculatorService: delete_all_equations()
+  CalculatorService->>EquationRepository: delete_all()
+  HistoryView->>HistoryView: initialize_equation_frame()
+```
+
+History-näkymästä vastaavan `HistoryView`-luokan tapahtumankäsittelijä `handle_equality_button_click` kutsuu sovelluslogiikasta vastaavan `CalculatorService`-luokan metodia `delete_all_equations`. Metodi `delete_all_equations` kutsuu `EquationRepository`-luokan metodia `delete_all`, joka alustaa laskuhistorian sisältävän tiedoston. Käyttöliittymä päivittää itsensä laskuhistorian sisältävän osan suhteen.
+
+### Normaalijakauman kertymäfunktion arvon laskeminen Stats-näkymässä
+
+Kun käyttäjä klikkaa painiketta "Calculate" syötettyään tarvittavat tiedot, etenee sovelluksen kontrolli seuraavasti:
+
+```mermaid
+sequenceDiagram
+  actor User
+  participant StatsView
+  participant StatsService
+  Note over User: click "Calculate" button
+  User->>StatsView: handle_calculate_button_click()
+  StatsView->>StatsService: normal_cdf(0, 0, 1)
+  StatsService-->>StatsView: 0.5
+```
+
+Stats-näkymästä vastaavan `StatsView`-luokan tapahtumankäsittelijä `handle_calculate_button_click` kutsuu sovelluslogiikasta vastaavan `StatsService`-luokan metodia `normal_cdf`. Metodi `normal_cdf` laskee kertymäfunktion arvon annetuilla parametreilla ja palauttaa tuloksen käyttöliittymälle, joka päivittää näkymänsä niin, että käyttäjä näkee tuloksen.
 
 ## Tiedostetut heikkoudet sovelluksen rakenteessa
 
