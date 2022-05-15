@@ -2,41 +2,34 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoitus on olla laskin, eli sillä  on mahdollista laskea erilaisia laskutoimituksia ja niistä muodostettuja lausekkeita reaaliluvuilla.
+Sovelluksen tarkoitus on olla laskin, eli sillä on mahdollista laskea erilaisia laskutoimituksia ja niistä muodostettuja lausekkeita reaaliluvuilla sekä todennäköisyysjakaumiin liittyviä tuloksia.
 
 ## Käyttäjät
 
 Sovelluksella on alustavan suunnitelman mukaan vain yhdenlaisia käyttäjiä samoin oikeuksin.
 
-## Käyttöliittymä
+### Käytössä olevan version tarjoama toiminnallisuus
 
-Sovellukseen on tarkoitus toteuttaa graafinen käyttöliittymä. **#Tehty**
-  
-  - elementit ja näykymä laskutoimitusten syöttämistä ja tulostamista varten **#Tehty**
-  - elementit laskimen muistitoiminnallisuuksia varten **#Tehty**
-  - elementit ja näkymä laskimen laskuhistoriaa varten **#Tehty**
-
-## Suunnitellut toiminnallisuudet
-
-### Ydintoiminnallisuus
-
-Tässä lueteltu toiminnallisuus on tarkoitus toteuttaa ensin.
-
-- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi **#Tehty**
-  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku **#Tehty**
-  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen **#Tehty**
-- käyttäjälle tulostetaan laskettu tulos **#Tehty**
-- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo, trigonometriset funktiot **#Tehty osittain**
-- vakiot: e, pi **#Tehty**
-- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen **#Tehty**
-- laskuhistoria (toteutetaan muistitoiminnallisuuksien rinnalle tai niiden korvaajaksi): **#Tehty suurimmilta osin**
+- käyttäjä voi syöttää laskutoimituksen tai laskutoimituksista muodostetun lausekkeen laskettavaksi
+  - tuetut laskutoimitukset: yhteenlasku, vähennyslasku, kertolasku, jakolasku, potenssilasku
+  - syötetyssä lausekkeessa on mahdollista käyttää sulkumerkintöjä laskujärjestyksen muuttamiseen
+- käyttäjälle tulostetaan laskettu tulos
+- lisää tuettuja laskutoimituksia: juuret, logaritmit, kertoma, modulo, itseisarvo
+- vakiot: e, pi
+- laskimen muistitoiminnallisuudet: tuloksen tallentaminen muistiin, tuloksen palauttaminen muistista, muistin tyhjentäminen
+- laskuhistoria:
   - käyttäjä näkee laskemansa laskutoimitukset ja niiden tulokset sekä pystyy suoraan syöttämään jo laskettuja tuloksia uusiin laskutoimituksiin
-  - käyttäjä pystyy poistamaan laskuhistoriasta yksittäisiä laskutoimituksia/tuloksia tai tyhjentämään laskuhistorian kokonaan
-- mahdollisuus laskea todennäköisyyksiä erilaisista todennäköisyysjakaumista
+  - käyttäjä pystyy tyhjentämään laskuhistorian
+- mahdollisuus laskea todennäköisyyksiä normaalijakaumasta
 
 ### Jatkokehitysideat
 
 Tässä lueteltuja toiminnallisuuksia toteutetaan ajan salliessa, kun ydintoiminnallisuus on toteutettu.
 
+- lisää tuettuja funktioita: trigonometriset funktiot, erikantaiset logaritmit...
+- mahdollisuus luoda omia funktioita ja 
+- mahollisuus piirtää funktioiden kuvaajia (graafisen laskimen toiminnallisuus)
+- lisää tuettuja jakaumia: t-jakauma, diskreetit jakaumat...
+- todennäköisyysjakaumien pistetodennäköisyys- ja tiheysfunktiot
+- todennäköisyysjakaumien kvantiilifunktiot
 - mahdollisuus syöttää aineistoja ja laskea näistä tilastollisia tunnuslukuja
-- graafisen laskimen toiminnallisuus
