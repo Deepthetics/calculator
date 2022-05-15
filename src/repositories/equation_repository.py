@@ -31,7 +31,7 @@ class EquationRepository:
         self._ensure_file_exists()
 
         with open(self._file_path, "a", encoding="utf-8") as file:
-            row = f"{equation.expression};{equation.result}"
+            row = f"{equation.expression};{equation.result};"
             file.write(row+"\n")
 
     def get_all(self):
@@ -49,7 +49,7 @@ class EquationRepository:
                 attributes = row.split(";")
                 expression = attributes[0]
                 result = attributes[1]
-                equations.append(Equation(expression, result))
+                equations.append(Equation(expression, float(result)))
 
             if not equations:
                 return False

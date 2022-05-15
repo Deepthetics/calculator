@@ -5,9 +5,10 @@ description = ""
 authors = ["Vili Sirkeoja <vili.sirkeoja@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">= 3.8, < 3.11"
 invoke = "^1.7.0"
 python-dotenv = "^0.20.0"
+scipy = {extras = ["stats"], version = "^1.8.0"}
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.3.2"

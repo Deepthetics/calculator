@@ -13,12 +13,12 @@ from repositories.result_repository import (
 
 
 class CalculatorService:
-    """Luokka, joka vastaa sovelluslogiikasta.
+    """Luokka, joka vastaa CalculatorView:n ja HistoryView:n tarjoamasta sovelluslogiikasta.
 
     Attributes:
         last_result: Result-luokan olio, joka kuvaa viimeksi laskettua tulosta.
         equation_repository: Vapaaehtoinen, oletusarvoisesti EquationRepository-luokan olio.
-        result_repository: ...
+        result_repository: Vapaaehtoinen, oletusarvoisesti ResultRepository-luokan olio.
     """
 
     def __init__(
@@ -26,11 +26,12 @@ class CalculatorService:
         equation_repository=default_equation_repository,
         result_repository=default_result_repository
     ):
-        """Luokan konstruktori, joka luo uuden sovelluslogiikasta vastaavan olion.
+        """Luokan konstruktori, joka luo uuden CalculatorView:n ja HistoryView:n
+        tarjoamasta sovelluslogiikasta vastaavan olion.
 
         Args:
             equation_repository: Vapaaehtoinen, oletusarvoisesti EquationRepository-luokan olio.
-            result_repository: ...
+            result_repository: Vapaaehtoinen, oletusarvoisesti ResultRepository-luokan olio.
         """
 
         self._last_result = Result(value=0)
@@ -50,10 +51,10 @@ class CalculatorService:
 
         try:
             result = eval(expression)
-            self._store_equation(Equation(expression, result))
+            self._store_equation(Equation(expression, float(result)))
             self._last_result = Result(value=result)
             return result
-        except (NameError, SyntaxError):
+        except (NameError, SyntaxError, ZeroDivisionError):
             return False
 
     def _store_equation(self, equation):

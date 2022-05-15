@@ -4,11 +4,18 @@ from services.calculator_service import calculator_service
 
 
 class CalculatorView:
-    def __init__(self, root, handle_open_history_view, entry_content, history_view_result=None):
+    """
+    Luokka, joka vastaa käyttöliittymän Calculator-näkymää.
+    """
+
+    def __init__(self, root, entry_content, history_view_result=None):
+        """
+        Luokan konstruktori, joka luo uuden Calculator-näkymää vastaavan olion.
+        """
+
         self._root = root
-        self._handle_open_history_view = handle_open_history_view
-        self.frame = None
-        self.entry = None
+        self._frame = None
+        self._entry = None
         self._entry_content = entry_content
         self._history_view_result = history_view_result
         self._button_frame = None
@@ -17,33 +24,36 @@ class CalculatorView:
         self._initialize()
 
     def destroy_view(self):
-        self.frame.destroy()
+        """
+        Tuhoaa näkymän.
+        """
+        self._frame.destroy()
 
     def _handle_input_button_click(self, button_text):
-        content = self.entry.get()
+        content = self._entry.get()
         if content == "Invalid input":
             self._handle_clear_button_click()
-        self.entry.insert(END, button_text)
+        self._entry.insert(END, button_text)
 
     def _handle_equality_button_click(self):
-        expression = self.entry.get()
-        self.entry.delete(0, END)
+        expression = self._entry.get()
+        self._entry.delete(0, END)
         result = calculator_service.calculate(expression)
 
         if result:
-            self.entry.insert(0, result)
+            self._entry.insert(0, result)
         else:
-            self.entry.insert(0, "Invalid input")
+            self._entry.insert(0, "Invalid input")
 
     def _handle_backspace_button_click(self):
-        content = self.entry.get()
+        content = self._entry.get()
         if content == "Invalid input":
             self._handle_clear_button_click()
         else:
-            self.entry.delete(len(self.entry.get())-1)
+            self._entry.delete(len(self._entry.get())-1)
 
     def _handle_clear_button_click(self):
-        self.entry.delete(0, END)
+        self._entry.delete(0, END)
 
     def _handle_ms_button_click(self):
         calculator_service.memory_store()
@@ -51,33 +61,33 @@ class CalculatorView:
     def _handle_mr_button_click(self):
         last = calculator_service.memory_recall()
         if last:
-            self.entry.insert(END, last)
+            self._entry.insert(END, last)
 
     def _handle_mc_button_click(self):
         calculator_service.memory_clear()
 
     def _initialize_frame(self):
-        self.frame = Frame(master=self._root)
-        self.frame.grid(column=0, row=0, sticky="nsew")
-        self.frame.columnconfigure(0, weight=1)
-        self.frame.rowconfigure(0, weight=1)
-        self.frame.rowconfigure(1, weight=1)
+        self._frame = Frame(master=self._root)
+        self._frame.grid(column=0, row=0, sticky="nsew")
+        self._frame.columnconfigure(0, weight=1)
+        self._frame.rowconfigure(0, weight=1)
+        self._frame.rowconfigure(1, weight=1)
 
     def _initialize_entry(self):
-        entry_font = font.Font(size=24, weight="bold")
+        entry_font = font.Font(size=20, weight="bold")
 
-        self.entry = Entry(
-            master=self.frame, bd=0, cursor="arrow", font=entry_font, justify=RIGHT)
-        self.entry.grid(column=0, row=0, padx=3, pady=3, sticky="nsew")
+        self._entry = Entry(
+            master=self._frame, bd=0, cursor="arrow", font=entry_font, justify=RIGHT)
+        self._entry.grid(column=0, row=0, padx=3, pady=0, sticky="nsew")
 
         if self._history_view_result:
-            self.entry.insert(0, self._entry_content +
-                              str(self._history_view_result))
+            self._entry.insert(0, self._entry_content +
+                               str(self._history_view_result))
         else:
-            self.entry.insert(0, self._entry_content)
+            self._entry.insert(0, self._entry_content)
 
     def _initialize_button_frame(self):
-        self._button_frame = Frame(master=self.frame)
+        self._button_frame = Frame(master=self._frame)
         self._button_frame.grid(column=0, row=1, padx=(
             3, 3), pady=(0, 3), sticky="nsew")
         self._button_frame.columnconfigure([0, 1, 2, 3, 4], weight=1)
