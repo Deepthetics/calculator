@@ -5,7 +5,7 @@ class Result:
         value: Float-arvo, joka kuvaa tuloksen arvoa.
     """
 
-    def __init__(self, value):
+    def __init__(self, value, index=None):
         """Luokan konstruktori, joka luo uuden tulosta kuvaavan olion.
 
         Args:
@@ -13,3 +13,5 @@ class Result:
         """
 
         self.value = value
+        self.index = index
+        
