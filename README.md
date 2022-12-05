@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Laskin
 
 ## Release
 
